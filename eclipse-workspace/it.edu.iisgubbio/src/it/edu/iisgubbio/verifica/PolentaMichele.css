@@ -1,0 +1,13 @@
+.label {
+	
+	-fx-font: italic bold 16pt "Arial Black";
+	-fx-text-fill: blue;
+}
+ .button {
+	 -fx-font: italic bold 13pt "Arial Black";
+	-fx-text-fill: red;
+ }
+.text-field {
+	-fx-font: italic bold 12pt "Arial Black";
+	-fx-text-fill: black;
+}
