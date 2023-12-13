@@ -3,12 +3,12 @@ package tpsit;
 
 public class GrafodiHolt{
 	
-	//dichiarazione varibile e l'ammatrice 
+	//variable and matrix declaration 
 	int grafodiHolt [][];
 	int dimensioniGrafo;
 
-	//Il costruttore inizializza una matrice bidimensionale ("grafodiHolt [][]")
-	//specificando le sue dimensioni tramite il paramtro ("dimensioniGrafo")
+	//Constructor initializes a two-dimensional matrix ("grafodiHolt [][]")
+	//specifying his dimensions via the parameter ("dimensioninGrafo")
 	public GrafodiHolt(int dimensioniGrafo) {
 	
 		this.grafodiHolt =  new int[dimensioniGrafo][dimensioniGrafo];
@@ -21,8 +21,8 @@ public class GrafodiHolt{
 		}
 
 	}
-	//il metodo "checkcolum" verifica se la somma degli elementi nella colonna resources è uguale a 0.
-	//restituisce true se la somma è 0 altrimenti restituisce false.
+	//"checkcolum" method checks if the sum of the items in the resources column is equal to 0.
+	//returns true if the sum is 0 otherwise returns false.
 	public Boolean checkcolum(int resources) { 
 		
 		int somma = 0;
@@ -36,30 +36,29 @@ public class GrafodiHolt{
 			return(false);
 		}
 	}
-	//Il metodo "setRequest" imposta un'assegnazione di risorsa per i parametri processo e risorsa.
 	
-	//Altrimenti, viene assegnato il valore 2. Se l'assegnamento non è possibile, viene stampato un messaggio di errore.
+	//The "setRequest" method sets a resource assignment for process and resource parameters.
 	public void setRequest(int processo, int risorsa) {
 	
 
 		if (this.grafodiHolt[processo][risorsa]==0) {
 			if (this.checkcolum(risorsa)){
 				this.grafodiHolt[processo][risorsa]=1;
-				//Se l'elemento della matrice corrispondente a 0 e la colonna (risorsa) ha una somma di 0 
-				//(verificato tramite checkcolum) viene assegnato il valore 1.
+				//If the matrix element corresponding to 0 and the column (risorsa) has a sum of 0 
+				//(verified by checkcolum) is assigned the value 1.
 			}
 			else {
 				this.grafodiHolt[processo][risorsa]=2;
-				//Altrimenti, viene assegnato il valore 2 
+				//Otherwise, the value 2 is assigned 
 			}
 		}
 		else {
 			System.out.print("Errore assegnamento non possibile");
-			//Se l'assegnamento non è possibile, viene stampato un messaggio di errore.
+			//If assignment is not possible, an error message is printed.
 		}
 
 	}
-	// il metodo "print2D" verifica se stampa la matrice bidimensionale  sulla console.
+	// the "print2D" method checks whether the two-dimensional matrix is printed on the console.
 	public  void print2D() {
 		
 		for (int k = 0; k < this.dimensioniGrafo; k++) {
