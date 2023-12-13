@@ -107,7 +107,7 @@ public class SJN {
 		}
 		
 		
-        //Print the string "processi".
+      		//Print the string "processi".
 		System.out.println("processi");
 		
 		for(int i = 0; i<=3; i++) {
@@ -122,7 +122,9 @@ public class SJN {
 		for(int i = 0; i<=3; i++) {
 			System.out.println(servizio[i]);
 			//Use a for to repeat through the execution array and print each item
-        //Print the string "servizi".
+              
+		
+		//Print the string "servizi".
 		System.out.println("servizi");
 		
 		for(int i = 0; i<=3; i++) {
@@ -130,12 +132,12 @@ public class SJN {
 			//Use a for to repeat through the execution array and print each item
 		}
 		
-        //Print the string "attese".
+        	//Print the string "attese".
 		System.out.println("attese");
 		
 		
 		System.out.println("la media attesa è: "+mediaAttesa);
-        //Print the average of the expectations, which seems to be stored in the average mediaAttesa
+        	//Print the average of the expectations, which seems to be stored in the average mediaAttesa
 		
 	}
 	
